@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8fafc;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #0f172a;
+}
+h2 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-size: 2.441rem;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.8rem;
+  background: transparent;
+  border-color: transparent;
+  color: rgb(15, 55, 211);
+  cursor: pointer;
+  /* animation */
+  animation: bounce 1s ease-in-out;
+}
+.toggle-btn:hover {
+  color: rgb(22, 0, 186);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  transform: translate(-100%);
+  transition: all 0.3s ease-in-out;
+}
+/* show sidebar */
+.show-sidebar {
+  transform: translate(0%);
+}
+
+@media (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+    height: 100vh;
+  }
+}
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.75rem;
+}
+.logo {
+  display: inline;
+  font-size: 2.2rem;
+  color: rgb(128, 128, 128);
+  height: 40px;
+}
+
+.company {
+  color: red;
+}
+.close-btn {
+  font-size: 1.7rem;
+  border-color: transparent;
+  background: transparent;
+  color: red;
+  cursor: pointer;
+}
+.close-btn:hover {
+  transform: rotate('360deg');
+}
+.links a {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: rgba(98, 79, 22, 0.851);
+}
+
+.links a:hover {
+  padding-left: 1.8rem;
+  background: rgb(21, 0, 255);
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.social-links {
+  display: flex;
+  margin: 0 auto;
+  gap: 1.2rem;
+  padding-bottom: 2rem;
+}
+.social-links a {
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.social-links a:hover {
+  color: purple;
+  cursor: pointer;
+}
